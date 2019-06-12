@@ -1,8 +1,9 @@
 import React from 'react';
 
 class SearchBar extends React.Component {
-  handleInStockChange = () => {
-    this.props.onInStockChange();
+  handleInStockChange = (event) => {
+    const checked = event.target.checked;
+    this.props.onInStockChange(checked);
   }
 
   handleFilterChange = (event) => {

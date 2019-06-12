@@ -25,11 +25,11 @@ class App extends React.Component {
   }
 
   handleFilterChange = (filterText) => {
-    this.setState((currState) => ({ filterText: filterText }));
+    this.setState(() => ({ filterText: filterText }));
   }
 
-  handleInStockChange = () => {
-    this.setState((currState) => ({ inStockOnly: !currState.inStockOnly }));
+  handleInStockChange = (inStockOnly) => {
+    this.setState((currState) => ({ inStockOnly: inStockOnly }));
   }
 
   render() {
