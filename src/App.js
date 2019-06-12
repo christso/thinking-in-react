@@ -15,13 +15,36 @@ const PRODUCTS = [
   {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
 
-function App() {
-  return (
-    <div className="App" style={{textAlign:"left"}}>
-      <SearchBar />
-      <ProductTable products={PRODUCTS} />
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filterText: '',
+      inStockOnly: false
+    };
+  }
+
+  handleFilterChange = (filterText) => {
+
+  }
+
+  handleInStockChange = () => {
+    this.setState((currState) => ({ inStockOnly: !currState.inStockOnly}));
+  }
+
+  render() {
+    return (
+      <div className="App" style={{textAlign:"left"}}>
+        <SearchBar
+          onInStockChange={this.handleInStockChange} 
+          onFilterChange={this.handleFilterChange} 
+        />
+        <ProductTable products={PRODUCTS}
+          inStockOnly={this.state.inStockOnly}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
