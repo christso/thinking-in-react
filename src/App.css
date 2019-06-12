@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding: 5px
+}
+
+.text-warn {
+  color: red
+}
