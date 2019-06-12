@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <form>
-        <input type="text" placeholder="Search..." onChange={this.handleFilterChange} />
+        <input type="text" value={this.props.filterText} placeholder="Search..." onChange={this.handleFilterChange} />
         <p>
           <input type="checkbox" onChange={this.handleInStockChange} />
           {' '}

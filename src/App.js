@@ -38,6 +38,7 @@ class App extends React.Component {
         <SearchBar
           onInStockChange={this.handleInStockChange} 
           onFilterChange={this.handleFilterChange} 
+          filterText={this.state.filterText}
         />
         <ProductTable products={PRODUCTS}
           inStockOnly={this.state.inStockOnly}
