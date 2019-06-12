@@ -25,11 +25,11 @@ class App extends React.Component {
   }
 
   handleFilterChange = (filterText) => {
-
+    this.setState((currState) => ({ filterText: filterText }));
   }
 
   handleInStockChange = () => {
-    this.setState((currState) => ({ inStockOnly: !currState.inStockOnly}));
+    this.setState((currState) => ({ inStockOnly: !currState.inStockOnly }));
   }
 
   render() {
@@ -41,6 +41,7 @@ class App extends React.Component {
         />
         <ProductTable products={PRODUCTS}
           inStockOnly={this.state.inStockOnly}
+          filterText={this.state.filterText}
         />
       </div>
     );
