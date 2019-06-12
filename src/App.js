@@ -1,9 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import SearchBar from './SearchBar';
-import ProductRow from './ProductRow';
-import ProductCategoryRow from './ProductCategoryRow';
 import ProductTable from './ProductTable';
 
 const PRODUCTS = [
